@@ -1,7 +1,13 @@
 import React from "react";
+import PageNav from "../components/PageNav";
 
 function Homepage() {
-  return <div>Homepage</div>;
+  return (
+    <div>
+      <PageNav />
+      Homepage
+    </div>
+  );
 }
 
 export default Homepage;
