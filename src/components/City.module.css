@@ -31,9 +31,10 @@
   gap: 1rem;
 }
 
-.city h3 span {
+.city h3 img {
   font-size: 3.2rem;
   line-height: 1;
+  width: 30px;
 }
 
 .city p {
