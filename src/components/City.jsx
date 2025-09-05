@@ -28,7 +28,7 @@ function City() {
   return (
     <div className={styles.city}>
       <div className={styles.row}>
-        <h6>{id}</h6>
+        <h6>{cityName}</h6>
         <h3>
           <img src={emoji} /> {cityName}
         </h3>

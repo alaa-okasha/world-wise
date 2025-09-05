@@ -3,41 +3,44 @@ import { createContext, useState, useEffect, useContext } from "react";
 const CitiesContext = createContext();
 
 function CitiesProvider({ children }) {
-  const [cities, setCities] = useState([]);
+  const [cities, setCities] = useState(() => {
+    const stored = localStorage.getItem("cities");
+    return stored ? JSON.parse(stored) : [];
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [currentCity, setCurrentCity] = useState({});
 
-  useEffect(function () {
-    async function fetchCities() {
-      try {
-        setIsLoading(true);
-        const res = await fetch("/cities.json");
-        const data = await res.json();
-        setCities(data.cities);
-      } catch {
-        alert("there was an error loading data");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchCities();
-  }, []);
-  async function getCity(id) {
-    try {
-      setIsLoading(true);
-      const res = await fetch("/cities.json");
-      const data = await res.json();
-      const numericId = Number(id);
-      const city = data.cities.find((city) => city.id === numericId);
-      setCurrentCity(city);
-    } catch {
-      alert("there was an error loading data");
-    } finally {
-      setIsLoading(false);
-    }
+  useEffect(() => {
+    localStorage.setItem("cities", JSON.stringify(cities));
+  }, [cities]);
+
+  function getCity(id) {
+    setIsLoading(true);
+    const numericId = Number(id);
+    const city = cities.find((city) => city.id === numericId);
+    setCurrentCity(city || {});
+    setIsLoading(false);
+  }
+  function createCity(newCity) {
+    console.log(newCity);
+
+    setCities((prev) => [...prev, newCity]);
+  }
+  function deleteCity(id) {
+    setCities((prev) => prev.filter((city) => city.id !== id));
+    if (currentCity?.id === id) setCurrentCity({});
   }
   return (
-    <CitiesContext.Provider value={{ cities, isLoading, currentCity, getCity }}>
+    <CitiesContext.Provider
+      value={{
+        cities,
+        isLoading,
+        currentCity,
+        getCity,
+        createCity,
+        deleteCity,
+      }}
+    >
       {children}
     </CitiesContext.Provider>
   );
