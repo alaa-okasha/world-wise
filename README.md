@@ -25,7 +25,7 @@ _Clean and modern landing page with call-to-action_
 
 ### Interactive Map View
 
-![Map View](./screenshots/map-view.png)
+![Map View](./screenshots/map-view1.png)
 _Interactive map showing all visited cities with markers_
 
 ### City Details
