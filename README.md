@@ -36,17 +36,15 @@ _Detailed view of a specific city with notes and visit information_
 ### Add New City Form
 
 ![Add City Form](./screenshots/add-city-form.png)
-_Form to add a new city with date picker and notes_
+![Add City Form](./screenshots/add-city-form1.png)
 
 ### Cities List
 
 ![Cities List](./screenshots/cities-list.png)
-_List view of all visited cities with quick actions_
 
 ### Countries Overview
 
 ![Countries View](./screenshots/countries-view.png)
-_Overview of all visited countries with flags_
 
 ## Tech Stack 🛠️
 
