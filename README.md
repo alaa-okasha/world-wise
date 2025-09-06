@@ -4,7 +4,7 @@ A modern React application for tracking your travels and creating a personal map
 
 ## 🔗 Live Demo
 
-**[View Live Application →](https://your-worldwise-app.vercel.app)**
+**[View Live Application →](https://world-wise-eight-sooty.vercel.app/)**
 
 ## Features ✨
 
