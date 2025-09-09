@@ -53,7 +53,7 @@ _Detailed view of a specific city with notes and visit information_
 - **React Router** - Client-side routing for navigation
 - **Leaflet & React-Leaflet** - Interactive maps and markers
 - **React DatePicker** - Date selection for travel dates
-- **Context API** - State management for cities data
+- **Context API with useReducer** - Advanced state management for cities data
 - **CSS Modules** - Scoped styling
 - **Local Storage** - Data persistence
 
@@ -147,6 +147,28 @@ The app integrates with:
 - All travel data is stored locally in your browser using `localStorage`
 - Data persists between browser sessions
 - No server-side storage required
+
+## State Management Architecture 🏗️
+
+The app uses React's Context API combined with `useReducer` for robust state management:
+
+### CitiesContext with useReducer
+
+- **Centralized State**: All cities data, loading states, and current city managed in one place
+- **Predictable Updates**: State changes handled through dispatched actions
+- **Actions Available**:
+  - `loading` - Sets loading state
+  - `cities/loaded` - Loads cities from localStorage
+  - `city/loaded` - Sets current city
+  - `cities/created` - Adds new city
+  - `cities/deleted` - Removes city from list
+
+### Benefits of useReducer Pattern
+
+- **Complex State Logic**: Better handling of multiple state updates
+- **Debugging**: Clear action types make state changes traceable
+- **Scalability**: Easy to add new actions and state properties
+- **Testing**: Reducer functions are pure and easily testable
 
 ## Custom Hooks 🎣
 
