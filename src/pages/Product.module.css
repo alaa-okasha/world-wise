@@ -14,6 +14,107 @@
   align-items: center;
 }
 
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  .product {
+    padding: 2rem 3rem;
+    margin: 2rem;
+  }
+
+  .product section {
+    width: clamp(60rem, 85%, 75rem);
+    margin: 4rem auto;
+    gap: 5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .product {
+    margin: 1.5rem;
+    padding: 2rem;
+    min-height: calc(100vh - 3rem);
+  }
+
+  .product section {
+    width: clamp(30rem, 90%, 60rem);
+    margin: 3rem auto;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 3rem;
+    text-align: center; /* Center content in single column */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .product {
+    margin: 1rem;
+    padding: 1.5rem 1rem;
+    min-height: calc(100dvh - 2rem); /* Dynamic viewport height */
+  }
+
+  .product section {
+    width: clamp(20rem, 95%, 40rem);
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .product {
+    margin: 0.5rem;
+    padding: 1rem 0.8rem;
+    min-height: calc(100dvh - 1rem);
+  }
+
+  .product section {
+    width: clamp(18rem, 98%, 35rem);
+    margin: 1.5rem auto;
+    gap: 1.5rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .product {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    min-height: calc(100vh - 2rem);
+  }
+
+  .product section {
+    width: clamp(40rem, 95%, 70rem);
+    margin: 2rem auto;
+    grid-template-columns: 1fr 1fr; /* Return to two columns in landscape */
+    gap: 2.5rem;
+    text-align: left; /* Reset text alignment */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .product {
+    margin: 0.25rem;
+    padding: 0.8rem 0.5rem;
+    min-height: calc(100dvh - 0.5rem);
+  }
+
+  .product section {
+    width: clamp(16rem, 99%, 30rem);
+    margin: 1rem auto;
+    gap: 1.2rem;
+  }
+}
+
+/* Large screens - prevent content from becoming too wide */
+@media (min-width: 1200px) {
+  .product section {
+    width: clamp(90rem, 75%, 120rem);
+    gap: 8rem;
+  }
+}
+
 .product img {
   width: 100%;
 }
