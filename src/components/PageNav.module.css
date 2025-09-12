@@ -11,6 +11,79 @@
   gap: 4rem;
 }
 
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  .nav ul {
+    gap: 3rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav ul {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav ul {
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav ul {
+    gap: 1rem;
+    font-size: 0.9em; /* Slightly smaller text for better fit */
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .nav ul {
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .nav ul {
+    gap: 0.8rem;
+    font-size: 0.85em;
+  }
+
+  .nav ul li {
+    flex-shrink: 1; /* Allow nav items to shrink if needed */
+  }
+}
+
 .nav a:link,
 .nav a:visited {
   text-decoration: none;

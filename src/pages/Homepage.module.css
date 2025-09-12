@@ -21,6 +21,96 @@
   text-align: center;
 }
 
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  .homepage {
+    padding: 2rem 3rem;
+    margin: 2rem;
+  }
+
+  .homepage section {
+    gap: 2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .homepage {
+    height: calc(100vh - 3rem);
+    margin: 1.5rem;
+    padding: 2rem;
+    background-position: center;
+  }
+
+  .homepage section {
+    height: 90%;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .homepage {
+    height: calc(100dvh - 2rem); /* Dynamic viewport height */
+    margin: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .homepage section {
+    height: 95%;
+    gap: 1.5rem;
+    justify-content: space-evenly; /* Better spacing on small screens */
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .homepage {
+    margin: 0.5rem;
+    padding: 1rem 0.8rem;
+    height: calc(100dvh - 1rem);
+  }
+
+  .homepage section {
+    gap: 1.2rem;
+    height: 100%;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .homepage {
+    height: calc(100vh - 2rem);
+    margin: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .homepage section {
+    height: 95%;
+    gap: 1rem;
+    flex-direction: row; /* Horizontal layout in landscape */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .homepage {
+    margin: 0.25rem;
+    padding: 0.8rem 0.5rem;
+    height: calc(100dvh - 0.5rem);
+  }
+
+  .homepage section {
+    gap: 1rem;
+    padding: 0 0.25rem;
+  }
+}
+
 .homepage h1 {
   font-size: 4.5rem;
   line-height: 1.3;

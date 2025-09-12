@@ -5,3 +5,34 @@
   display: flex;
   position: relative;
 }
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .app {
+    padding: 1.6rem;
+    flex-direction: column;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .app {
+    padding: 1.2rem;
+    height: 100dvh; /* Use dynamic viewport height for mobile */
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .app {
+    padding: 0.8rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .app {
+    padding: 1rem;
+    height: 100vh;
+  }
+}

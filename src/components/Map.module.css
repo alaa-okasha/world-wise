@@ -5,6 +5,52 @@
   position: relative;
 }
 
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .mapContainer {
+    flex: 1;
+    min-height: 60vh; /* Ensure minimum height on mobile */
+    height: auto;
+    order: 2; /* Place map below sidebar on mobile */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .mapContainer {
+    min-height: 50vh;
+    height: 50vh; /* Fixed height on small mobile */
+    border-radius: 0.8rem; /* Add rounded corners for better mobile UX */
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .mapContainer {
+    min-height: 45vh;
+    height: 45vh;
+    border-radius: 0.6rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .mapContainer {
+    min-height: 70vh;
+    height: 70vh;
+    flex: 2; /* Give map more space in landscape */
+  }
+}
+
+/* Very small screens (like older iPhones) */
+@media (max-width: 320px) {
+  .mapContainer {
+    min-height: 40vh;
+    height: 40vh;
+    border-radius: 0.4rem;
+  }
+}
+
 .map {
   height: 100%;
 }
